@@ -1,4 +1,4 @@
-"""This file contains filter_primes(numbers: List[int]) -> List[int] method which filters prime numbers from a list of integers and returns a list of prime numbers,invert_dict(input_dict: Dict[Any, Any]) -> Dict[Any, List[Any]] method which return a dictionary with keys and values inverted"""
+"""This file contains filter_primes(numbers: List[int]) -> List[int] method which filters prime numbers from a list of integers and returns a list of prime numbers,invert_dict(input_dict: Dict[Any, Any]) -> Dict[Any, List[Any]] method which return a dictionary with keys and values inverted."""
 
 from typing import Any, List
 
