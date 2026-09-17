@@ -1,4 +1,4 @@
-"""This file contains a function classify_number(number: int) -> str which classifies a number as 'positive', 'negative', or 'zero' based on its value, factorial(n: int) -> int which calculates the factorial of an integer n"""
+"""This file contains a function classify_number(number: int) -> str which classifies a number as 'positive', 'negative', or 'zero' based on its value, factorial(n: int) -> int which calculates the factorial of an integer n."""
 
 def classify_number(number: int) -> str:
     """Classify a number as 'positive', 'negative', or 'zero' based on its value"""
