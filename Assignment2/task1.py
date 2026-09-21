@@ -1,4 +1,4 @@
-"""This file contains reverse_words(input_str: str) which reverses letters in each word,solve_quad(a: float, b: float, c: float) -> Tuple[float, float] which solves a quadratic equation and evaluate_conditions(a: bool, b: bool, c: bool) -> bool which evaluates the conditions a, b, c and returns True if two are True, else False"""
+"""This file contains reverse_words(input_str: str) which reverses letters in each word,solve_quad(a: float, b: float, c: float) -> Tuple[float, float] which solves a quadratic equation and evaluate_conditions(a: bool, b: bool, c: bool) -> bool which evaluates the conditions a, b, c and returns True if two are True, else False."""
 
 
 def reverse_words(input_str:str) -> str:
