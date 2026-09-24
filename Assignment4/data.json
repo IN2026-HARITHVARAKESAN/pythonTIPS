@@ -1,0 +1,19 @@
+{
+  "name": "Alice",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "Wonderland",
+    "location": {
+      "lat": 51.5074,
+      "lon": 0.1278
+    }
+  },
+  "skills": {
+    "programming": ["Python", "JavaScript"],
+    "languages": {
+      "english": true,
+      "french": false
+    }
+  }
+}
