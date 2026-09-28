@@ -1,4 +1,4 @@
-"""This file contains Employee class which represents an employee details"""
+"""This file contains Employee class which represents an employee details."""
 
 
 class Employee:
