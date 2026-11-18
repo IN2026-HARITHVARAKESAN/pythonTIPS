@@ -1,7 +1,9 @@
+"""This script fetches the content of a specific webpage and saves it to a text file. It handles various exceptions that may occur during the process, such as I/O errors, HTTP errors, value errors, and connection errors."""
 import requests
 from bs4 import BeautifulSoup
 
 def get_website(filename):
+	"""Fetches the content of a specific webpage and saves it to a text file."""
 	try:
 		response = requests.get('https://www.geeksforgeeks.org/python/whats-the-zen-of-python/')
 		soup = BeautifulSoup(response.text, 'html.parser')

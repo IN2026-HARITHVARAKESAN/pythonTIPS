@@ -1,6 +1,7 @@
 """Creates a new custom exception called InvalidAgeException. This exception is raised when the user enters an invalid age (less than or equal to 0)."""
 
 class InvalidAgeException(Exception):
+    """Custom exception for invalid age input"""
     def __init__(self, message):
         super().__init__(message)
         age = int(input("Enter your valid age above zero: "))
@@ -8,7 +9,7 @@ class InvalidAgeException(Exception):
         pass
 
 def validate_user_age(age):
-
+    """Validates the user's age. Raises InvalidAgeException if age is less than or equal to 0."""
     if age <= 0:
         raise InvalidAgeException("Age must be a positive integer.")
     if age < 13:
