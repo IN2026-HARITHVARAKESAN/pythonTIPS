@@ -8,6 +8,7 @@ from click._bashcomplete import get_choices
 COLOURS = ["red", "green", "blue", "yellow"]
 
 def complete_colour(ctx, args, incomplete):
+    """Returns a list of colours that start with the incomplete string."""
     return [c for c in COLOURS if c.startswith(incomplete)]
 
 @click.command()
@@ -15,6 +16,7 @@ def complete_colour(ctx, args, incomplete):
 @click.option("--colour", default="green", help="Text colour.",
               autocompletion=complete_colour)
 def cli(name, colour):
+    """A simple command-line tool that greets the user in a specified colour."""
     click.secho(f"[App_A | click {click.__version__}] Hello, {name}!", fg=colour)
     suggestions = [c for c, _help in get_choices(cli, "app_a", ["--colour"], "b")]
     click.echo(f"Tab-completion suggestions for '--colour b': {suggestions}")

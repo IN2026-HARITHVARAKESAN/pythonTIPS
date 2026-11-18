@@ -1,14 +1,15 @@
+"""This script generates a random DataFrame and creates a scatter plot of two of its columns."""
 import pandas as pd
 
 import numpy as np
 
 import matplotlib.pyplot as plt
 
+if __name__ == "__main__":
+    df =pd.DataFrame(np.random.rand(50, 4), columns=['a', 'b', 'c', 'd'])
 
-df =pd.DataFrame(np.random.rand(50, 4), columns=['a', 'b', 'c', 'd'])
+    print(df.head())
 
-print(df.head()) # Print the first 5 rows of the DataFrame
+    df.plot(kind='scatter',x='a', y='b')
 
-df.plot(kind='scatter',x='a', y='b')
-
-plt.show() # Displays the plot
+    plt.show()
