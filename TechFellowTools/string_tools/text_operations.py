@@ -1,3 +1,4 @@
+"""String operations for reversing words, counting word frequency, removing duplicates, and checking palindromes."""
 def reverse_words(text):
     """Reverse the order of words in a sentence."""
     return " ".join(text.split()[::-1])

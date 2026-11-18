@@ -1,3 +1,4 @@
+"""CSV operations for reading, writing, filtering, sorting, and merging CSV files."""
 import csv
 
 def read_csv(file_path):

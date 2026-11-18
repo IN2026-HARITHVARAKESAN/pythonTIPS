@@ -1,3 +1,4 @@
+"""Statistical operations for mean, median, mode, variance, and standard deviation."""
 def calculate_mean(numbers):
     """Calculate the average of numbers."""
     if len(numbers) == 0:

@@ -1,3 +1,4 @@
+"""Graph algorithms for undirected graphs."""
 def breadth_first_search(graph, start):
     """Visit graph nodes level by level."""
 

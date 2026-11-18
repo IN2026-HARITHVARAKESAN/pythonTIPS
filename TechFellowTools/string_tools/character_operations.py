@@ -1,3 +1,4 @@
+"""Character operations for counting letters, digits, and extracting unique characters."""
 def count_lowercase_letters(s):
     """Count the number of lowercase letters in a string."""
     sum = 0

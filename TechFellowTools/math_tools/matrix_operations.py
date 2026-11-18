@@ -1,4 +1,4 @@
-
+"""Matrix operations for addition, subtraction, multiplication, transpose, and determinant calculation."""
 def matrix_addition(matrix_a, matrix_b):
     """Add two matrices."""
     if len(matrix_a) != len(matrix_b):

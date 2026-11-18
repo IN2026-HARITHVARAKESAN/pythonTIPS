@@ -1,3 +1,4 @@
+"""Data analysis functions for processing and analyzing structured data."""
 def find_missing_values(data):
     """Find missing or empty values in each column."""
     missing = {}
