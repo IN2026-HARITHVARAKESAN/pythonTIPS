@@ -1,11 +1,14 @@
+"""This module provides advanced file operations including reading, writing, and handling large files using memory mapping."""
 import mmap
 import os
 
 class AdvancedFileOps:
+    """Class to perform advanced file operations such as reading, writing, and handling large files."""
     def __init__(self, filepath:str):
         self.filepath = filepath
     
     def read_file(self):
+        """Reads the content of the file specified by the filepath. If the file exists, it reads the data using an optimized buffer size and prints the content. If the file does not exist, it prints an error message."""
         if os.path.exists(self.filepath):
             buffer_size = self.optimize_buffer()
             with open(self.filepath, "r", buffering=buffer_size) as file:
@@ -15,6 +18,7 @@ class AdvancedFileOps:
             return
 
     def write_file(self, data:str):
+        """Writes the provided data to the file specified by the filepath. If the file exists, it appends the data using an optimized buffer size. If the file does not exist, it prints an error message."""
         if os.path.exists(self.filepath):
             buffer_size = self.optimize_buffer()
             with open(self.filepath, "a", buffering=buffer_size) as file:
@@ -24,6 +28,7 @@ class AdvancedFileOps:
             print("file doesn't exist to write data")
 
     def handle_large_file(self, operation:str, data:str):
+        """Handles large files using memory mapping. Depending on the operation specified ('read' or 'write'), it either reads the content of the file or appends data to it. If the operation is invalid, it prints an error message."""
         if operation == "read":
             try:
                 with open(self.filepath, "r") as file:
@@ -46,6 +51,7 @@ class AdvancedFileOps:
             print("Invalid operation. Use 'read' or 'write'.")
 
     def optimize_buffer(self):
+        """Optimizes the buffer size for reading and writing files. It calculates the buffer size based on the file size, ensuring it is within a specified range (minimum 8KB, maximum 1MB)."""
         minimum_buffer = 8 * 1024
         maximum_buffer = 1024 * 1024
         file_size = os.path.getsize(self.filepath) if os.path.exists(self.filepath) else 0
