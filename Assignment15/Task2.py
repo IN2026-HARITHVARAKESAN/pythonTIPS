@@ -1,7 +1,5 @@
 """Tokenize sentences, filter stop words, and count word frequencies."""
 
-STOP_WORDS = {"is", "the", "to", "a", "and", "in", "of"}
-
 def tokenize(sentences):
     """Yield lowercase words from each sentence."""
     for sentence in sentences:
@@ -24,13 +22,15 @@ def count_frequency(words):
     for word, count in frequency.items():
         yield (word, count)
 
-sentences = [
-    "Python is easy to learn"
-]
+if __name__ == "__main__":
+    STOP_WORDS = {"is", "the", "to", "a", "and", "in", "of"}
+    sentences = [
+        "Python is easy to learn"
+    ]
 
-tokens = tokenize(sentences)
-filtered_words = remove_stop_words(tokens)
-word_counts = count_frequency(filtered_words)
+    tokens = tokenize(sentences)
+    filtered_words = remove_stop_words(tokens)
+    word_counts = count_frequency(filtered_words)
 
-for word, count in word_counts:
-    print(word, ":", count)
+    for word, count in word_counts:
+        print(word, ":", count)
