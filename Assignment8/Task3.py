@@ -3,15 +3,8 @@ from sklearn.datasets import load_iris
 
 import numpy as np
 
-# Loading the Iris dataset
-
-iris = load_iris()
-
-data = iris.data
-
-feature_names = iris.feature_names
-
 def z_score(data_dictinary_list:list)-> None:
+    """Calculates the z-score for each feature in the data dictionary list."""
     mean = {
         feature : np.mean([sample[feature] for sample in data_dictinary_list]) for feature in feature_names
     }
@@ -27,7 +20,12 @@ def z_score(data_dictinary_list:list)-> None:
         }
         for sample in data_dictinary_list
     ]
+if __name__ == "__main__":
+    iris = load_iris()
 
-data_dictinary_list = [{feature_names[i]:sample[i] for i in range(len(sample))} for sample in data ]
+    data = iris.data
 
-print(z_score(data_dictinary_list))
+    feature_names = iris.feature_names
+    data_dictinary_list = [{feature_names[i]:sample[i] for i in range(len(sample))} for sample in data ]
+
+    print(z_score(data_dictinary_list))

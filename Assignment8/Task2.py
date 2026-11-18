@@ -1,3 +1,4 @@
+"""This file fetches the content of a specific webpage and extracts all the links from it."""
 import requests
 
 from bs4 import BeautifulSoup
